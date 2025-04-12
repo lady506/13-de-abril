@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #111;
+  }
+  
+  .emoji {
+    position: absolute;
+    font-size: 2rem;
+    animation: fall linear infinite;
+    user-select: none;
+    pointer-events: none;
+  }
+  
+  @keyframes fall {
+    0% {
+      transform: translateY(-10%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(110vh);
+      opacity: 0;
+    }
+  }
+  .titulo {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Cursive', sans-serif;
+    font-size: 1,5rem;
+    color: #ffffff;
+    font-style: italic;
+    z-index: 1000;
+  }
+  .gif-lado {
+    position: fixed;
+    bottom: 60px;
+    width: 120px;
+    z-index: 10;
+    opacity: 0;
+  }
+  
+  .gif-izquierda {
+    left: -200px;
+    animation: entrarIzquierda 2s ease-out forwards;
+    animation-delay: 1s;
+  }
+  
+  .gif-derecha {
+    right: -200px;
+    animation: entrarDerecha 2s ease-out forwards;
+    animation-delay: 1s;
+  }
+  
+  @keyframes entrarIzquierda {
+    to {
+      left: 50px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes entrarDerecha {
+    to {
+      right: 50px;
+      opacity: 1;
+    }
+  }
+  
